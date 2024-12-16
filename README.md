@@ -1,8 +1,4 @@
-# React + Vite
+RNN Color Quest Game
+RNN Color Quest is an interactive game that challenges your knowledge of programming languages and their corressponding color. Guess the correct color for a given language, receive instant feedback, and track your progress to refine your coding skills in this engaging and color-based puzzle Game.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Landing Starting Page](main-game.png)
