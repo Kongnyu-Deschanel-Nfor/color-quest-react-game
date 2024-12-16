@@ -1,0 +1,236 @@
+/* :root{
+--primary: #9dd4f8;
+--font-size: 26px;
+--padding:20px;
+--headerHeight:100vh;
+--hdescription-size:15px;
+--secondary-color: #ffffff
+}
+
+.main-wrapper{
+
+}
+
+header{
+    text-align: center;
+    padding: var(--padding);
+    color: var(--primary);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.774),rgba(0, 0, 0, 0.5)),
+     url('./img/header-img.jpg');
+    background-position: center;
+    background-size: cover;
+    height: var(--headerHeight);
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.header-description{
+    color: var(--secondary-color);
+    width: 50vw;
+}
+
+.btn-cta{
+    background-color: var(--primary);
+    color: rgb(97, 86, 86);
+    width: 30%;
+    padding: 4px 2px;
+    border-radius: .3rem;
+    transition: all 400ms ease-in;
+}
+/* 
+.header-description{
+    width: 50%;
+} */
+/* .btn-cta:hover{
+ transform: scale(1.1);
+ background-color: azure;
+ color: black;
+ cursor: pointer;
+}
+.tagheader-img{
+    transform: scale(.7);
+} */ 
+
+:root {
+    --primary: #9dd4f8;
+    --font-size: 26px;
+    --padding: 30px;
+    --header-height: 100vh;
+    --hdescription-size: 15px;
+    --secondary-color: #ffffff;
+    --btn-hover-bg: #ffffff;
+    --btn-hover-color: #000;
+    --animation-duration: 1s;
+}
+
+/* Wrapper for global styling */
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    padding: var(--padding);
+    color: var(--secondary-color);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('./img/header-img.jpg');
+    background-position: center;
+    background-size: cover;
+    height: var(--header-height);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    animation: fadeIn var(--animation-duration) ease-in-out;
+}
+
+/* Title Styling */
+.header-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: var(--primary);
+    animation: slideIn var(--animation-duration) ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Description Styling */
+.header-description {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    width: 50%;
+    margin: 0 auto;
+    animation: fadeIn var(--animation-duration) ease-in-out 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Button styling */
+.btn-cta {
+    background-color: var(--primary);
+    color: #000;
+    font-size: 1.1rem;
+    width: 200px;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 300ms ease, background-color 300ms ease;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn-cta:hover {
+    transform: scale(1.1);
+    background-color: var(--btn-hover-bg);
+    color: var(--btn-hover-color);
+}
+
+/* Image styling */
+.tagheader-img {
+    width: 70%;
+    max-width: 500px;
+    margin: 0 auto;
+    transform: scale(0.9);
+    transition: transform 0.4s ease;
+    animation: zoomIn var(--animation-duration) ease-in-out;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+}
+
+.tagheader-img:hover {
+    transform: scale(1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header-description {
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    .header-title {
+        font-size: 2rem;
+    }
+
+    .btn-cta {
+        width: 150px;
+        font-size: 1rem;
+    }
+
+    .tagheader-img {
+        width: 90%;
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 25px;
+    }
+
+    .header-title {
+        font-size: 1.8rem;
+    }
+
+    .header-description {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .btn-cta {
+        width: 140px;
+        font-size: 0.9rem;
+    }
+
+    .tagheader-img {
+        width: 100%;
+    }
+}

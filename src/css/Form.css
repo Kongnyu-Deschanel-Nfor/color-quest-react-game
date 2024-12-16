@@ -1,0 +1,124 @@
+:root {
+    --form-bg-color: #f9f9f9;
+    --form-border-color: #ccc;
+    --form-border-radius: 10px;
+    --form-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --label-font-size: 16px;
+    --input-padding: 10px;
+    --input-font-size: 16px;
+    --input-border-color: #ccc;
+    --input-border-focus-color: #9dd4f8;
+    --button-bg-color: #9dd4f8;
+    --button-hover-color: #7bb8e2;
+    --button-text-color: #fff;
+    --button-font-size: 18px;
+    --button-padding: 10px 15px;
+    --mobile-font-size: 14px;
+    --mobile-padding: 8px;
+}
+
+/* General styles for the form */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  
+}
+
+form {
+    min-width: 600px;
+    padding: 20px;
+    border: 2px solid var(--form-border-color);
+    border-radius: var(--form-border-radius);
+    box-shadow: var(--form-shadow);
+    background-color: var(--form-bg-color);
+}
+
+/* Form fields container */
+.lang-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+.lang-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: var(--label-font-size);
+}
+
+/* Input field styling */
+.lang-container input {
+    padding: var(--input-padding);
+    font-size: var(--input-font-size);
+    border: 2px solid var(--input-border-color);
+    border-radius: 5px;
+    width: 90%;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.lang-container input:focus {
+    border-color: var(--input-border-focus-color);
+}
+
+/* Submit button styling */
+button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    font-size: var(--button-font-size);
+    padding: var(--button-padding);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+        min-width:300px ;
+    }
+
+    .lang-container input {
+        font-size: var(--mobile-font-size);
+    }
+
+    button {
+        font-size: var(--mobile-font-size);
+        padding: var(--mobile-padding);
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        padding: 10px;
+    }
+
+    .lang-container label {
+        font-size: var(--mobile-font-size);
+    }
+
+    .lang-container input {
+        font-size: var(--mobile-font-size);
+        padding: var(--mobile-padding);
+    }
+
+    button {
+        font-size: var(--mobile-font-size);
+        padding: var(--mobile-padding);
+    }
+}

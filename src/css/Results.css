@@ -1,0 +1,85 @@
+.results-table {
+    width: 100%;
+    margin: 10px 10px;
+    border-collapse: collapse;
+    text-align: center;
+    transform: scale(.8);
+}
+
+.results-table h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.results-table table {
+    width: 40%;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.results-table th,
+.results-table td {
+    padding: 7px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.results-table .status {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
+.results-table .success {
+    background-color: green;
+    color: white;
+    animation: highlightSuccess 1.5s ease-in-out infinite alternate;
+}
+
+.results-table .fail {
+    background-color: red;
+    color: white;
+    opacity: 0.8;
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Success Animation */
+@keyframes highlightSuccess {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(0, 255, 0, 0.8);
+    }
+    100% {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px rgba(0, 255, 0, 1);
+    }
+}
+
+/* Shake Animation for Fails */
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+}
+
+/* Fade-in for Table */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
